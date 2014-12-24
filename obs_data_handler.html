@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>lmh.com</title>
+		<script src="html/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="html/style.css">
+		<link rel="icon" type="image/png" href="html/images/favicon.png">
+	</head>
+	<body onload="pageHeightAdjust()" onresize="pageHeightAdjust()">
+			<div id="contentWindow">
+				<center>
+					<div id="innerContentWindow">
+						<div id="innerHeader">
+							<div id="innerHeader_left">
+							<a href="index.html"><img src="html/images/lmh.com.png" height="95px;"></a>
+							</div>
+							<div id="innerHeader_right">
+							<div id="oneThird"><a id="header" href="index.html">Home</a></div>
+							<div id="twoThird"><a id="header" href="tools.html">Tools</a></div>
+							<div id="threeThird"><a id="header" href="stream.html">Stream</a></div>
+							</div>
+						</div>
+						<div id="bodyContents">
+						<h2>OBS Twitch Stream Data Generator / Converter</h2>
+						<p>To use this tool, simply put your Upload speed into the box below. To find your upload speed, go to <a id="link" href="http://www.speedtest.net">SpeedTest.net</a> and perform a quick speed test to find out your internet speed. Make sure you select a server located near the target streaming server you will be using. This will reveal a more accurate representation of the speeds you will have during streaming.</p>
+						<div id="boxedContents">
+						<form><input type="button" value="Update" onclick="update_information()" id="update"></button>
+						<table id="spacer">
+						<tr>
+						<td><div id="lineSpacer20px"></div></td>
+						<td><div id="lineSpacer20px"></div></td>
+						</tr>
+						<tr>
+						<td id="floatRight"><form><b>Your Upload Speed </b>(In Megabits per second): </td>
+						<td><input type="text" name="inputUploadSpeed" value="Input speed here..." id="inputUpload" onfocus="clearInput_mbps()" onblur="blur_mbps()" onkeypress="return isNumber(event)">
+						</form></td></tr>
+						<tr>
+						<td id="floatRight"><form><b>Network Interference Cost* </b>(Defaut 75%): </td>
+						<td><input type="text" name="inputUploadSpeed" value="75" id="percentRedact" onfocus="clearInput_per()" onblur="blur_per()" onkeypress="return isNumber(event)">
+						</form></td></tr>
+						</table>
+						<h2>Recommended Encoding Settings</h2>
+						<table>
+						<tr>
+						<td id="floatRight">Use CBR?: </td>
+						<td><input type="text" name="uploadSpeedMB" value="No" readonly="readonly"></form></td>
+						</tr>
+						<tr>
+						<td id="floatRight">Max Bitrate (kb/s): </td>
+						<td><input type="text" name="uploadSpeedMB" value="" id="outputKBs"></form></td>
+						</tr>
+						</table>
+						</div>
+						<p id="important">Interference Cost* = This is a percentage used to simulate typical network usage in case of network lag or interference.<br>100% = 0% Network interference, 0% = 100% Network interference.</p>
+						</div>
+					</div>
+				</center>
+			</div>
+	</body>
+</html>
+
+
+
+
+
